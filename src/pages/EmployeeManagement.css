@@ -1,0 +1,117 @@
+.emp-manage-container{
+    margin: 2%;
+    display: flex;
+    gap: 80px;
+    flex-wrap: wrap-reverse;
+}
+.emp-manage-container h2{
+    font-size: 30px;
+    margin: 1%;
+    text-wrap: nowrap;
+}
+.emp-add{
+    display: flex;
+    flex-direction: column;
+    /* gap: 10px; */
+    /* background-color: var(--logo-two); */
+    background-color: white;
+    filter: drop-shadow(0px 0px 20px rgba(0,0,0,0.2));
+    padding: 3%;
+    border-radius: 1%;
+    height: fit-content;
+}
+.emp-add label{
+    margin: 5% auto 0.5% 0px;
+}
+.form{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.emp-table table thead tr{
+    background-color: var(--logo-three);
+    height: 50px;
+}
+.emp-table table{
+    width: 1200px;
+    text-align: center;
+}
+.emp-table table tr {
+    border-bottom: 1px solid black;
+    cursor: pointer;
+}
+.emp-table table {
+    border-collapse: collapse;
+}
+.emp-table table tr td{
+    padding: 20px;
+}
+.emp-table table tr:hover{
+    background-color: var(--logo-one);
+}
+.emp-table table tbody tr{
+    background-color: antiquewhite;
+}
+.emp-add .form input,.emp-add .form button,.emp-add .form select{
+    padding: 8px;
+    border-radius: 5px;
+}
+.emp-add .form button{
+    background-color: var(--logo-three);
+    cursor: pointer;
+    border: none;
+}
+.emp-add .form input:focus{
+    /* border:solid var(--logo-one); */
+    outline:solid var(--logo-one);
+    border: none;
+}
+.emp-add .form input{
+    border: solid 0.5px;
+}
+.table-container{
+    height: 75vh;
+    position: sticky;
+    top: 70%;
+    /* background-color: antiquewhite; */
+    overflow-y: scroll;
+}
+.table-container table thead{
+    position: sticky;
+    top: 0px;
+}
+@media (max-width:600px){
+    .emp-manage-container{
+        justify-content: left;
+    }
+    .table-container{
+        overflow-x: scroll;
+        width: 100vw;
+    }
+    .emp-add{
+        filter: none;
+    }
+    body{
+        width: 100vw;
+        overflow-x: hidden;
+    }
+    .table-container table{
+        width: 100%;
+        margin-right: 20px;
+        font-size: 10px;
+    }
+    .emp-table table tr td{
+    padding: 5px;
+}
+.emp-table table tr td,.emp-table table thead tr td{
+    width: 10px;
+}
+.emp-table table thead tr{
+    height: 20px;
+}
+.emp-table h2{
+    font-size: 15px;
+    margin-top: -50px;
+}
+
+}

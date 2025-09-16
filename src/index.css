@@ -1,0 +1,24 @@
+*{
+  font-family: "Roboto", sans-serif;
+  margin: 0px;
+  animation: loadComponents 0.6s linear;
+}
+:root{
+  --background-color:#fcfcfc;
+  --logo-one:#fbd87f;
+  --logo-two:#f75590;
+  --logo-three:#10ffcb;
+}
+body{
+  background-color: var(--background-color);
+}
+
+@keyframes loadComponents{
+  0%{
+    opacity: 0;
+    filter: blur(50);
+  }100%{
+    opacity: 1;
+    filter: blur(0);
+  }
+}

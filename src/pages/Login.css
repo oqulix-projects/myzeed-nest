@@ -1,0 +1,75 @@
+.login-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color:#ffffff;
+    padding: 80px;
+    filter: drop-shadow(0px 0px 5px rgba(0,0,0,0.10));
+    border-radius: 20px;
+}
+.left-img{
+    width: 400px;
+}
+
+.logo{
+    width: 200px;
+    margin: 5%;
+}
+.login-right h2{
+    font-size: 60px;
+    font-weight: 200;
+}
+.input-form{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.login-right{
+    width: 500px;
+    padding: 5%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+.login-left{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.input-form label{
+    font-size: 20px;
+    margin:6% 2% 1% 2%;
+}
+.input-form input{
+    width: 300px;
+    padding: 12px;
+    border-radius: 10px;
+    border:  solid black 0.5px;
+    font-size: 15px;
+}
+.input-form button{
+    width: 325px;
+    padding: 12px;
+    margin-top: 2%;
+    border: none;
+    background-color: var(--logo-one);
+    transition: 0.5s;
+    border-radius: 10px;
+
+}
+.input-form button:hover{
+    background-color: var(--logo-two);
+    cursor: pointer;
+}
+.input-form button:active{
+    background-color: var(--logo-three);
+}
+@media (max-width:600px) {
+    .login-container{
+        flex-direction: column;
+    }
+    .left-img{
+        width: 200px;
+    }
+}
