@@ -4,14 +4,14 @@ import { getAnalytics } from "firebase/analytics";
 import { browserLocalPersistence, getAuth, setPersistence } from "firebase/auth";
 import { getFirestore } from "firebase/firestore";
 
-export const firebaseConfig = {
-  apiKey: "AIzaSyALgvPlNrdoPd9bL-26oqyDdpjAWK9UM0A",
-  authDomain: "oqulix-nest.firebaseapp.com",
-  projectId: "oqulix-nest",
-  storageBucket: "oqulix-nest.firebasestorage.app",
-  messagingSenderId: "1062926352512",
-  appId: "1:1062926352512:web:c468e8060f8481ef59e665",
-  measurementId: "G-8MWSEVG6L9"
+const firebaseConfig = {
+  apiKey: "AIzaSyA-AVZtkKtxOMmWFk04LXkun0n8nyTJD-Y",
+  authDomain: "oqulix-nest-e6f1f.firebaseapp.com",
+  projectId: "oqulix-nest-e6f1f",
+  storageBucket: "oqulix-nest-e6f1f.firebasestorage.app",
+  messagingSenderId: "886413934456",
+  appId: "1:886413934456:web:300857e34bb98f73a2528d",
+  measurementId: "G-E5KQCWCGWK"
 };
 
 
