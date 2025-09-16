@@ -9,9 +9,10 @@ import { Link } from 'react-router-dom'
 
 const EmployeeManagement = () => {
 
-    const [empData, setEmpData] = useState({ empName: '', empDepartment: '', empPosition: '', empSuperVisor: '', empEmail: '', empPassword: '' })
+    const [empData, setEmpData] = useState({ empName: '', empDepartment: '', empPosition: '', empEmail: '', empPassword: '' })
     const [employees, setEmployees] = useState([])
     console.log(employees);
+    
     
     const [triggerRefresh,setTriggerRefresh]=useState(false)
     const handleAddEmployee = async () => {
@@ -48,7 +49,7 @@ const EmployeeManagement = () => {
                                     <th>Department</th>
                                     <th>Position</th>
                                     <th>Email</th>
-                                    <th>Supervisor</th>
+                                    {/* <th>Supervisor</th> */}
                                 </tr>
                             </thead>
                             <tbody>
@@ -60,7 +61,7 @@ const EmployeeManagement = () => {
                                     <td>{emp.empDepartment}</td>
                                     <td>{emp.empPosition}</td>
                                     <td>{emp.empEmail}</td>
-                                    <td>{emp.empSuperVisor}</td>
+                                    {/* <td>{emp.empSuperVisor}</td> */}
                                 </tr>)):
                                 <tr><td colSpan={'6'}>No Employees Exist....</td></tr>
                                 }
@@ -79,11 +80,11 @@ const EmployeeManagement = () => {
                         <input id='emp-dep' type="text" onChange={(e) => setEmpData({ ...empData, empDepartment: e.target.value })} />
                         <label htmlFor="emp-des">Position</label>
                         <input id='emp-des' type="text" onChange={(e) => setEmpData({ ...empData, empPosition: e.target.value })} />
-                        <label htmlFor="emp-sup">Supervisor</label>
+                        {/* <label htmlFor="emp-sup">Supervisor</label>
                         <select name="" id="emp-sup" onChange={(e) => setEmpData({ ...empData, empSuperVisor: e.target.value })}>
                             <option value="test">test</option>
                             <option value="test2">test2</option>
-                        </select>
+                        </select> */}
                         <label htmlFor="emp-email">Employee Email</label>
                         <input id='emp-email' type="email" onChange={(e) => setEmpData({ ...empData, empEmail: e.target.value })} />
                         <label htmlFor="emp-password">Employee Password</label>

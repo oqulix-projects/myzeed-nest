@@ -4,7 +4,7 @@ import { getAnalytics } from "firebase/analytics";
 import { browserLocalPersistence, getAuth, setPersistence } from "firebase/auth";
 import { getFirestore } from "firebase/firestore";
 
-const firebaseConfig = {
+export const firebaseConfig = {
   apiKey: "AIzaSyA-AVZtkKtxOMmWFk04LXkun0n8nyTJD-Y",
   authDomain: "oqulix-nest-e6f1f.firebaseapp.com",
   projectId: "oqulix-nest-e6f1f",

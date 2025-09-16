@@ -115,3 +115,9 @@
 }
 
 }
+.dlt-btn{
+    background-color: rgb(226, 71, 71);
+    border-radius: 5px;
+    border: solid 1px;
+    cursor: pointer;
+}

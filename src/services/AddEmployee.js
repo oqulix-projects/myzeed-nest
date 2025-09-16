@@ -1,7 +1,7 @@
 import { initializeApp, getApps } from 'firebase/app';
 import { getAuth, createUserWithEmailAndPassword, signOut } from 'firebase/auth';
 import { db } from '../../firebaseConfig';
-import { doc, setDoc } from 'firebase/firestore';
+import { deleteDoc, doc, serverTimestamp, setDoc } from 'firebase/firestore';
 import { v4 as uuidv4 } from 'uuid';
 import { firebaseConfig } from '../../firebaseConfig';
 
@@ -53,5 +53,38 @@ export const addNewEmployee = async (empData, loggedInUserId, companyName) => {
   } catch (error) {
     console.error('Error adding employee:', error.message);
     alert('Failed to add employee: ' + error.message);
+  }
+};
+
+
+export const deleteEmployee = async (empUid, loggedInUserId, companyName, empName, empEmail) => {
+  console.log( empUid, loggedInUserId, companyName, empName, empEmail);
+  
+  try {
+    // ✅ Delete from company-specific employees collection
+    const employeeRef = doc(db, "userData", loggedInUserId, "employees", empUid);
+    await deleteDoc(employeeRef);
+
+    // ✅ Delete from global allEmployees collection
+    const employeeRefMain = doc(db, "allEmployees", empUid);
+    await deleteDoc(employeeRefMain);
+
+    // ✅ Log deletion request for admin action
+    const deleteLogRef = doc(db, "toDeleteEmployees", empUid);
+    await setDoc(deleteLogRef, {
+      empUid,
+      empUid,
+      empName,
+      empEmail,
+      companyName,
+      companyId: loggedInUserId,
+      requestedAt: serverTimestamp(),
+      status: "pending", // so admin/CF can later process
+    });
+
+    console.log("Employee records deleted and deletion logged successfully!");
+  } catch (error) {
+    console.error("Error deleting employee:", error.message);
+    throw error;
   }
 };
