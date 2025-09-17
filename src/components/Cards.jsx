@@ -13,21 +13,21 @@ const Cards = () => {
       image: finance,
       tag: 'Track your finances effortlessly',
       detail: 'Manage income, expenses, and budgets all in one place with real-time insights and reports.',
-      link: 'https://nest-finance-dun.vercel.app'
+      link: 'https://myzeed-finance.oqulix.com/'
     },
     {
       name: 'CRM',
       image: crm,
       tag: 'Strengthen client relationships',
       detail: 'Keep track of leads, conversations, and customer data to boost engagement and grow your business.',
-      link: 'https://nest-crm-henna.vercel.app'
+      link: 'https://myzeed-crm.oqulix.com/'
     },
     {
       name: 'Task Manager',
       image: task,
       tag: 'Get things done—together',
       detail: 'Create, assign, and monitor tasks in a collaborative workspace designed for productivity.',
-      link:'https://nest-pma.vercel.app'
+      link:'https://myzeed-pma.oqulix.com/'
     },
     {
       name: 'Employee Management',
